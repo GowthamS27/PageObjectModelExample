@@ -17,15 +17,19 @@ public class DropDownEx {
 		WebElement dropdown1 = driver.findElement(By.xpath("//*[@class='ui-selectonemenu']"));
 		Select select = new Select(dropdown1);
 		select.selectByIndex(1);
-		WebElement country = driver.findElement(By.xpath("//*[@id='j_idt87:country_label']"));
-		Select countrySelect = new Select(country);
-		countrySelect.selectByVisibleText("India");
-		WebElement city = driver.findElement(By.xpath("//*[@id='j_idt87:city_label']"));
-		Select citySelect = new Select(city);
-		citySelect.deselectByVisibleText("Chennai");
-		WebElement courses = driver.findElement(By.xpath("//*[@id=\"j_idt87:auto-complete\"]/ul"));
+		WebElement drop = driver.findElement(By.xpath("//*[@id=\"j_idt87:country\"]/div[3]"));
+		drop.click();
+		WebElement country = driver.findElement(By.xpath("//*[@data-label='India']"));
+		country.click();
+		WebElement drop2 = driver.findElement(By.xpath("//*[@id=\"j_idt87:city\"]/div[3]"));
+		drop2.click();
+		WebElement city = driver.findElement(By.xpath("//*[@data-label='Chennai']"));
+		city.click();
+		WebElement drop3 = driver.findElement(By.xpath("//*[@id='j_idt87:auto-complete']/button"));
+		drop3.click();
+		WebElement courses = driver.findElement(By.xpath("//*[@id=\"j_idt87:auto-complete_panel\"]/ul"));
 		Select multi = new Select(courses);
-		multi.selectByValue("Appium");
+		multi.selectByIndex(1);
 		
 	}
 }
