@@ -23,7 +23,7 @@ public class DropDownEx {
 		country.click();
 		WebElement drop2 = driver.findElement(By.xpath("//*[@id=\"j_idt87:city\"]/div[3]"));
 		drop2.click();
-		WebElement city = driver.findElement(By.xpath("//*[@data-label='Chennai']"));
+		WebElement city = driver.findElement(By.id("j_idt87:city_2"));
 		city.click();
 		WebElement drop3 = driver.findElement(By.xpath("//*[@id='j_idt87:auto-complete']/button"));
 		drop3.click();
