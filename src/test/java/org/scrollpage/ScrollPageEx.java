@@ -23,11 +23,13 @@ public class ScrollPageEx {
 		//scroll up
 		executor.executeScript("“window.scroll(0,-450)", "");
 		//Go to the bottom of the page
+		driver.get("https://www.leafground.com/dashboard.xhtml");
 		//bottom of page
 		executor.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		Thread .sleep(3000);
 		//top of page
 		executor.executeScript("window.scroll(0,0)", "");
+		driver.get("https://www.leafground.com/dashboard.xhtml");
 		Robot robot= new Robot();
 		//page down
 		robot.keyPress(KeyEvent.VK_PAGE_DOWN);
